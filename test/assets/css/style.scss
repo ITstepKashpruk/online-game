@@ -98,7 +98,6 @@
 ul.slick-dots {
 	display: block;
 	width: 100%;
-	bottom: -50px;
 
 	li {
 		button:before {
@@ -133,5 +132,31 @@ ul.slick-dots {
 	&:hover {
 		outline: none;
 		color: #f48e06;
+	}
+}
+
+.for-nav {
+	display: block;
+	width: 350px;
+	height: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin: 0 auto;
+
+	button {
+		position: relative;
+		top: 14px;
+		left: 0;
+	}
+
+	.slick-dots {
+		width: 300px;
+	}
+
+	.slick-dots li button {
+		position: relative;
+		top: 0;
+		left: 0;
 	}
 }

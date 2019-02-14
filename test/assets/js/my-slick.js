@@ -6,6 +6,8 @@ $('.online-game').slick({
 	slidesPerRow: 3,
 	slidesToScroll: 1,
 	arrows: true,
+	appendArrows: $('.for-nav'),
+	appendDots: $('.for-nav'),
 
 	responsive: [{
 			breakpoint: 768,

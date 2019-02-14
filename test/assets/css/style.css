@@ -94,7 +94,6 @@
 ul.slick-dots {
   display: block;
   width: 100%;
-  bottom: -50px;
 }
 
 ul.slick-dots li button:before {
@@ -126,5 +125,36 @@ ul.slick-dots li button:before {
 .slick-next:hover {
   outline: none;
   color: #f48e06;
+}
+
+.for-nav {
+  display: block;
+  width: 350px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto;
+}
+
+.for-nav button {
+  position: relative;
+  top: 14px;
+  left: 0;
+}
+
+.for-nav .slick-dots {
+  width: 300px;
+}
+
+.for-nav .slick-dots li button {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 /*# sourceMappingURL=style.css.map */
