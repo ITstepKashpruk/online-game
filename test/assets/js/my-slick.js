@@ -7,20 +7,7 @@ $('.online-game').slick({
 	slidesToScroll: 1,
 	arrows: true,
 
-	responsive: [
-		{
-			breakpoint: 1024,
-			settings: {
-				dots: true,
-				infinite: true,
-				slidesToShow: 1,
-				rows: 2,
-				slidesPerRow: 3,
-				slidesToScroll: 1,
-				arrows: true,
-			},
-		},
-		{
+	responsive: [{
 			breakpoint: 768,
 			settings: {
 				dots: true,
@@ -46,4 +33,3 @@ $('.online-game').slick({
 		},
 	],
 });
-$('.slick-next').append('');

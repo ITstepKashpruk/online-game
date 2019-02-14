@@ -1,26 +1,20 @@
-* {
-	// border: 1px solid #000;
-}
-
 .container {
-	padding: 1% 3%;
+	padding: 50px;
 	width: 60%;
 	margin: 0 auto;
 	background-color: #1c1c1c;
 	color: #fff;
 
 	h2 {
-		margin-left: 20px;
 		font-size: 24px;
 		margin-bottom: 20px;
-
 	}
 }
 
 .online-game {
 	.game {
 		position: relative;
-		margin: 20px 0;
+		margin: 1.3%;
 
 		&:hover {
 			cursor: pointer;
@@ -57,22 +51,23 @@
 		}
 
 		.wrapp {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 1px;
+
 			&::after {
 				content: '';
 				display: block;
 				background-image: linear-gradient(0, rgba(28, 28, 30, 0.705) 0%, rgba(28, 28, 30, 0) 30%);
-				width: 301px;
+				width: 100%;
 				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 50%;
-				transform: translate(-50%, 0);
 				border-radius: 10px;
 			}
 		}
 
 		img {
-			// margin: 0 auto;
 			width: 100%;
 			height: auto;
 			border: 1px solid transparent;
@@ -90,7 +85,7 @@
 		span {
 			position: absolute;
 			bottom: 5%;
-			left: 15%;
+			left: 5%;
 			color: #fff;
 			z-index: 9999;
 			max-width: 200px;
@@ -103,7 +98,7 @@
 ul.slick-dots {
 	display: block;
 	width: 100%;
-	bottom: -35px;
+	bottom: -50px;
 
 	li {
 		button:before {
@@ -130,7 +125,6 @@ ul.slick-dots {
 	border-radius: 50%;
 	cursor: pointer;
 	background: transparent;
-	bottom: -67px;
 
 	border: 1px solid #f6f6f63d;
 	box-shadow: 0 0 1px 1px #f6f6f63d;
