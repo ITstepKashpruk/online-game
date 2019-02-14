@@ -1,13 +1,83 @@
+$screen-xl-max: 1200px; // big desctop
+$screen-lg-max: 1024px; // Tablets and small desktops
+$screen-md-max: 768px; // Small tablets (portrait view)
+$screen-sm-max: 480px; // Tiny phones
+$screen-xs-max: 375px; // Tiny phones
+
+* {
+	border: 1px solid #000;
+}
+
+@mixin xl {
+	@media only screen and(max-width: #{$screen-xl-max}) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media only screen and(max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+
+// Large devices
+@mixin md {
+	@media only screen and(max-width: #{$screen-md-max}) {
+		@content;
+	}
+}
+
+// Medium devices
+@mixin sm {
+	@media only screen and(max-width: #{$screen-sm-max}) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media only screen and(max-width: #{$screen-xs-max}) {
+		@content;
+	}
+}
+
 .container {
-	padding: 50px;
+	padding: 20px 50px;
 	width: 60%;
 	margin: 0 auto;
 	background-color: #1c1c1c;
 	color: #fff;
 
+	@include xl {
+		width: 70%;
+		padding: 40px;
+
+	}
+
+	@include lg {
+		width: 80%;
+		padding: 30px;
+
+	}
+
+	@include sm {
+		width: 90%;
+		padding: 20px;
+
+	}
+
+	@include xs {
+		width: 100%;
+		padding: 20px 10px;
+
+	}
+
 	h2 {
-		font-size: 24px;
-		margin-bottom: 20px;
+		font-size: 20px;
+		margin-bottom: 24px;
+
+		@include sm {
+			margin-left: 20px;
+		}
 	}
 }
 
@@ -84,12 +154,35 @@
 
 		span {
 			position: absolute;
-			bottom: 5%;
-			left: 5%;
+			bottom: 10px;
+			left: 15px;
 			color: #fff;
 			z-index: 9999;
 			max-width: 200px;
 			font-size: 20px;
+
+			@include xl {
+				font-size: 18px;
+			}
+
+			@include lg {
+				font-size: 13px;
+			}
+
+			@include md {
+				font-size: 16px;
+				left: 10px;
+			}
+
+			@include sm {
+				font-size: 20px;
+				left: 20%;
+			}
+
+			@include xs {
+				font-size: 20px;
+				left: 10%;
+			}
 		}
 	}
 }
@@ -97,14 +190,12 @@
 
 ul.slick-dots {
 	display: block;
-	width: 100%;
+	max-width: 250px;
 
 	li {
 		button:before {
 			font-size: 8px;
 			color: #fff;
-
-			&:active {}
 		}
 	}
 
@@ -137,7 +228,7 @@ ul.slick-dots {
 
 .for-nav {
 	display: block;
-	width: 350px;
+	max-width: 300px;
 	height: 30px;
 	display: flex;
 	justify-content: space-around;
@@ -148,6 +239,19 @@ ul.slick-dots {
 		position: relative;
 		top: 14px;
 		left: 0;
+		z-index: 100;
+
+		&:hover {
+			.fas {
+				color: #f48e06;
+			}
+		}
+	}
+
+	.fas {
+		color: #fff;
+		font-size: 24px;
+		z-index: 9999;
 	}
 
 	.slick-dots {
@@ -159,4 +263,35 @@ ul.slick-dots {
 		top: 0;
 		left: 0;
 	}
+}
+
+.slick-dots li {
+	display: none
+}
+
+.slick-dots li.slick-active,
+.slick-dots li.slick-active+li,
+.slick-dots li.slick-active+li+li {
+	display: inline-block;
+}
+
+.slick-dots li:nth-last-child(1),
+.slick-dots li:nth-last-child(2),
+.slick-dots li:nth-last-child(3) {
+	display: inline-block;
+}
+
+.slick-dots li.slick-active~li:nth-last-child(1),
+.slick-dots li.slick-active~li:nth-last-child(2),
+.slick-dots li.slick-active~li:nth-last-child(3) {
+	display: none;
+}
+
+.slick-dots li.slick-active+li+li:nth-last-child(3),
+.slick-dots li.slick-active+li+li:nth-last-child(2),
+.slick-dots li.slick-active+li+li:nth-last-child(1),
+.slick-dots li.slick-active+li:nth-last-child(3),
+.slick-dots li.slick-active+li:nth-last-child(2),
+.slick-dots li.slick-active+li:nth-last-child(1) {
+	display: inline-block;
 }
