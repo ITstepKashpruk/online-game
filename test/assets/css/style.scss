@@ -50,25 +50,21 @@ $screen-xs-max: 375px; // Tiny phones
 	@include xl {
 		width: 70%;
 		padding: 40px;
-
 	}
 
 	@include lg {
 		width: 80%;
 		padding: 30px;
-
 	}
 
 	@include sm {
 		width: 90%;
 		padding: 20px;
-
 	}
 
 	@include xs {
 		width: 100%;
 		padding: 20px 10px;
-
 	}
 
 	h2 {
@@ -85,9 +81,14 @@ $screen-xs-max: 375px; // Tiny phones
 	.game {
 		position: relative;
 		margin: 1.3%;
+		transition-duration: 2s;
 
 		&:hover {
 			cursor: pointer;
+
+			img {
+				box-shadow: none;
+			}
 
 			button {
 				display: block;
@@ -98,13 +99,14 @@ $screen-xs-max: 375px; // Tiny phones
 				right: 0;
 				margin: auto;
 				width: 150px;
-				height: 40px;
+				height: 50px;
 				background-color: #f48e06;
 				outline: none;
 				border: none;
-				border-radius: 5px;
+				border-radius: 4px;
 				color: #fff;
-				font-size: 18px;
+				font-size: 16px;
+				letter-spacing: 1px;
 
 				&:hover {
 					cursor: pointer;
@@ -112,11 +114,12 @@ $screen-xs-max: 375px; // Tiny phones
 				}
 			}
 
+
+
 			.wrapp {
 				&::after {
 					background-color: rgba(28, 28, 30, 0.705);
 				}
-
 			}
 		}
 
@@ -130,7 +133,9 @@ $screen-xs-max: 375px; // Tiny phones
 			&::after {
 				content: '';
 				display: block;
-				background-image: linear-gradient(0, rgba(28, 28, 30, 0.705) 0%, rgba(28, 28, 30, 0) 30%);
+				background-image: linear-gradient(0,
+					rgba(28, 28, 30, 0.705) 0%,
+					rgba(28, 28, 30, 0) 30%);
 				width: 100%;
 				height: 100%;
 				border-radius: 10px;
@@ -145,7 +150,8 @@ $screen-xs-max: 375px; // Tiny phones
 			box-shadow: 0px 15px 20px 0px rgba(10, 14, 20, 0.55);
 			z-index: 100;
 			margin: 0 auto;
-			max-width: 300px;
+
+
 		}
 
 		button {
@@ -160,6 +166,7 @@ $screen-xs-max: 375px; // Tiny phones
 			z-index: 9999;
 			max-width: 200px;
 			font-size: 20px;
+			letter-spacing: .5;
 
 			@include xl {
 				font-size: 18px;
@@ -187,7 +194,6 @@ $screen-xs-max: 375px; // Tiny phones
 	}
 }
 
-
 ul.slick-dots {
 	display: block;
 	max-width: 250px;
@@ -198,7 +204,6 @@ ul.slick-dots {
 			color: #fff;
 		}
 	}
-
 }
 
 .slick-dots li.slick-active button:before {
@@ -215,7 +220,6 @@ ul.slick-dots {
 	border-radius: 50%;
 	cursor: pointer;
 	background: transparent;
-
 	border: 1px solid #f6f6f63d;
 	box-shadow: 0 0 1px 1px #f6f6f63d;
 	outline: none;
@@ -266,7 +270,7 @@ ul.slick-dots {
 }
 
 .slick-dots li {
-	display: none
+	display: none;
 }
 
 .slick-dots li.slick-active,
